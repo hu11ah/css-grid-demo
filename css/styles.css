@@ -1,0 +1,26 @@
+.my-grid {
+    background-color: red;
+    display: grid; /* this makes it a grid container */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.my-grid > .grid-item {
+    background-color: black;
+    color: antiquewhite;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item.span-2 { /* this makes it only appear on the one element because of no space */
+    grid-column: 1 / 3;
+    /* Grid column start: 1
+        Grid column end: 3 */
+}
+
+.grid-item.span-2.span-2-rows {
+    grid-row:  2 / span 3;
+}
